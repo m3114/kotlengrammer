@@ -39,47 +39,18 @@ class MainActivity : AppCompatActivity() {
             Log.d("변수연습02", myName)
         }
 
-        btnCondition01.setOnClickListener {
-//            조건문 번튼 눌리면면 실횅 코드
-            val userAge = 10
-//            나이가 이상인가요> 로그로 성인입니다. 문장 출력
-            if(userAge >=20 ){
+        bntOk.setOnClickListener {
 
-                Log.d("조건문01","성인입니다.")
+            val inputcontent = edtcontent.text.toString()
 
-            }
-            else if(userAge >= 17){
-                Log.d("조건문01", "고등학생입니다.")
-            }
-            else if(userAge >= 14){
-                Log.d("조건문01", "중학생입니다.")
-            }
-            else{
-                Log.d("조건문01", "초등학생이거나, 미취학생입니다.")
-            }
-       }
+            Log.d("입력내용", inputcontent)
 
-        btnCondition02.setOnClickListener {
-//            논리 연산자 체험
-//            높은 연봉, 가까운 거리, 야근없음. 퇴사율 0
-//            회사의 조건
-            val companyAsalary = 3000
-            val companyADistance = 50
-            val companyoffEaryl = true
-//            1번 구직자 4000이면 ok
-            val person01Ok = companyAsalary >= 4000
+            textContent.text = inputcontent
 
-            Log.d("조건문02", person01Ok.toString())
 
-//            2번 구직자 거리가 가깝다,. 이동시가 ㄴ30분이내,. or 빨리 퇴근ok
-//            boolean
-            val person02Ok = (companyADistance <= 30) || companyoffEaryl
 
-            Log.d("조건문02", person02Ok.toString())
 
-//          지우너자 3번 빨리 퇴근안하는 회사 not연산
-            val person03Ok = !companyoffEaryl
-            Log.d("조건문02",person03Ok.toString())
+        }
         }
 
 
