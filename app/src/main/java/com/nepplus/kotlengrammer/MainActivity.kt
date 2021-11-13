@@ -3,6 +3,7 @@ package com.nepplus.kotlengrammer
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -46,6 +47,9 @@ class MainActivity : AppCompatActivity() {
             Log.d("입력내용", inputcontent)
 
             textContent.text = inputcontent
+
+//            입력한 내용을 토스로 출력
+            Toast.makeText(this, inputcontent, Toast.LENGTH_SHORT).show()
 
 
 
