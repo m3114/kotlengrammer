@@ -59,6 +59,26 @@ class MainActivity : AppCompatActivity() {
             }
        }
 
+        btnCondition02.setOnClickListener {
+//            논리 연산자 체험
+//            높은 연봉, 가까운 거리, 야근없음. 퇴사율 0
+//            회사의 조건
+            val companyAsalary = 3000
+            val companyADistance = 50
+            val companyAWorkEasy = true
+//            1번 구직자 4000이면 ok
+            val person01Ok = companyAsalary >= 4000
+
+            Log.d("조건문02", person01Ok.toString())
+
+//            2번 구직자 거리가 가깝다,. 이동시가 ㄴ30분이내,. or 빨리 퇴근ok
+            val person02Ok = (companyADistance <= 30) || companyAWorkEasy
+
+            Log.d("조건문02", person02Ok.toString())
+
+
+        }
+
 
     }
 }
